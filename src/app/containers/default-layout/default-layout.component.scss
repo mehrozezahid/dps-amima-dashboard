@@ -1,0 +1,97 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #18297f;
+  color: white;
+  .row-1 {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1rem 0rem 1rem;
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      img {
+        width: 6rem;
+        margin: 0.5rem 1rem;
+        justify-content: center;
+      }
+    }
+
+    .options {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      .icon {
+        margin: 0.5rem;
+        color: #c4c4c4;
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+      .account {
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin: 0rem 1rem;
+        .account-type {
+          font-weight: 400;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .row-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 1rem;
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .header-element {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        align-items: center;
+        &.selected {
+          border-bottom: 2px solid #00c898;
+        }
+        .icon {
+          margin-right: 0.8rem;
+          font-size: 1.5rem;
+        }
+        &:hover {
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.filters-container {
+  display: flex;
+  flex-direction: row;
+  background: #e7e7e7;
+  padding: 1rem 14rem;
+  justify-content: space-around;
+  .filter-input .form-control {
+    background: transparent;
+    color: black;
+    &:focus {
+      border-color: transparent;
+      box-shadow: unset;
+    }
+  }
+}
+
+.background-white {
+  background-color: white;
+  height: 100%;
+}

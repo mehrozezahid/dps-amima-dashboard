@@ -1,0 +1,105 @@
+<div class="animated fadeIn">
+  <div class="card-container">
+    <div class="card">
+      <div class="text-top">Decreased CO2</div>
+      <div class="text-bottom">1,2 tonne</div>
+    </div>
+
+    <div class="card">
+      <div class="text-top">CO2 target process</div>
+      <div class="text-bottom cyan">56%</div>
+    </div>
+
+    <div class="card">
+      <div class="text-top">Registered users</div>
+      <div class="text-bottom">2.868</div>
+    </div>
+
+    <div class="card">
+      <div class="text-top">Active users</div>
+      <div class="text-bottom">1.850</div>
+    </div>
+  </div>
+
+  <!-- First 2 graphs -->
+  <div class="graph-container">
+    <div class="graph-card">
+      <div class="header">CO2 emissions</div>
+      <!--/.row-->
+      <div class="chart-wrapper" style="height: 300px; margin-top: 40px">
+        <canvas
+          baseChart
+          class="chart"
+          [datasets]="co2ChartData"
+          [labels]="co2LabelsX"
+          [options]="co2ChartOptions"
+          [colors]="co2ChartColours"
+          [legend]="co2ChartLegend"
+          [chartType]="co2ChartType"
+        ></canvas>
+      </div>
+      <div class="footer">
+        <span class="label">CO2 emmission</span>
+        <span class="label">CO2 quarter target</span>
+      </div>
+    </div>
+
+    <div class="graph-card">
+      <div class="header">Active Users</div>
+      <!--/.row-->
+      <div class="chart-wrapper" style="height: 200px; margin-top: 20px">
+        <canvas
+          baseChart
+          class="chart"
+          [datasets]="activeUsersChartData"
+          [labels]="activeUsersChartLabels"
+          [options]="activeUsersChartOptions"
+          [colors]="activeUsersChartColours"
+          [legend]="activeUsersChartLegend"
+          [chartType]="activeUsersChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"
+        ></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- second row of graphs -->
+  <div class="graph-container">
+    <div class="graph-card">
+      <div class="header">Modes of transport used for commuting</div>
+      <!--/.row-->
+      <div class="chart-wrapper" style="height: auto; margin-top: 10px">
+        <canvas
+          baseChart
+          class="chart"
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [colors]="pieChartColours"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"
+        ></canvas>
+      </div>
+    </div>
+
+    <div class="graph-card">
+      <div class="header">Registered Users</div>
+      <!--/.row-->
+      <div class="chart-wrapper" style="height: 200px; margin-top: 20px">
+        <canvas
+          baseChart
+          class="chart"
+          [datasets]="registeredUsersChartData"
+          [labels]="registeredUsersChartLabels"
+          [options]="registeredUsersChartOptions"
+          [colors]="registeredUsersChartColours"
+          [legend]="registeredUsersChartLegend"
+          [chartType]="registeredUsersChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"
+        ></canvas>
+      </div>
+    </div>
+  </div>
+</div>

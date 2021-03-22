@@ -1,0 +1,108 @@
+<div class="header">
+  <div class="row-1">
+    <div class="logo"><img src="./assets/Amima.png" /></div>
+    <div class="options">
+      <a class="icon"><span class="material-icons"> email </span></a>
+      <a class="icon">
+        <span class="material-icons"> notifications </span>
+      </a>
+      <div class="account">
+        Thomas Schotlz
+        <div class="account-type">Admin account</div>
+      </div>
+    </div>
+  </div>
+  <div class="row-2">
+    <div class="nav-menu">
+      <div
+        class="header-element"
+        [class.selected]="selectedTab === TABS.OVERVIEW"
+        (click)="selectTab(TABS.OVERVIEW)"
+        routerLink="/dashboard"
+      >
+        <span class="material-icons icon"> list </span>
+        Overview
+      </div>
+      <div
+        class="header-element"
+        [class.selected]="selectedTab === TABS.CHALLENGES"
+        (click)="selectTab(TABS.CHALLENGES)"
+        routerLink="/challenges"
+      >
+        <span class="material-icons icon"> track_changes </span>
+        Challenges
+      </div>
+      <div
+        class="header-element"
+        [class.selected]="selectedTab === TABS.SETTINGS"
+        (click)="selectTab(TABS.SETTINGS)"
+      >
+        <span class="material-icons icon"> settings </span>
+        Settings
+      </div>
+    </div>
+  </div>
+</div>
+<div class="app-body">
+  <!-- Main content -->
+  <main class="main">
+    <div class="filters-container">
+      <div class="filter-input">
+        <select id="select-period" name="select" class="form-control">
+          <option value="0">Period</option>
+          <option value="1">01.01.2021 - 01.02.2021</option>
+          <option value="2">01.02.2021 - 01.03.2021</option>
+          <option value="3">01.03.2021 - 01.04.2021</option>
+        </select>
+      </div>
+      <div class="filter-input">
+        <select id="select-country" name="select2" class="form-control">
+          <option value="0">Country</option>
+          <option value="1">Germany</option>
+          <option value="2">Austria</option>
+          <option value="3">Switzerland</option>
+          <option value="3">Sweden</option>
+          <option value="3">Luxembourg</option>
+        </select>
+      </div>
+      <div class="filter-input">
+        <select id="select-location" name="select3" class="form-control">
+          <option value="0">Location</option>
+          <option value="1">Location 1</option>
+          <option value="2">Location 2</option>
+          <option value="3">Location 3</option>
+          <option value="3">Location 4</option>
+          <option value="3">Location 5</option>
+        </select>
+      </div>
+      <div class="filter-input">
+        <select id="select-area" name="select4" class="form-control">
+          <option value="0">Board area</option>
+          <option value="1">Board area 1</option>
+          <option value="2">Board area 2</option>
+          <option value="3">Board area 3</option>
+          <option value="3">Board area 4</option>
+          <option value="3">Board area 5</option>
+        </select>
+      </div>
+      <div class="filter-input">
+        <select id="select-mode" name="select5" class="form-control">
+          <option value="0">Mode of transport</option>
+          <option value="1">Mode 1</option>
+          <option value="2">Mode 2</option>
+          <option value="3">Mode 3</option>
+          <option value="3">Mode 4</option>
+          <option value="3">Mode 5</option>
+        </select>
+      </div>
+    </div>
+    <div class="container-fluid background-white">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- /.container-fluid -->
+  </main>
+</div>
+<app-footer>
+  <span><a href="#">AMIMA</a> &copy; 2021 TU München.</span>
+  <span class="ml-auto">Developed by <a href="#">Mehroze Zahid</a></span>
+</app-footer>

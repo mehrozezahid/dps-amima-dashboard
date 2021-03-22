@@ -1,0 +1,43 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-between;
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0rem 0.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 1px 2px 2px 2px #d9d9d9;
+    border-color: transparent;
+    .text-top {
+      border-bottom: 1px solid #d9d9d9;
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+      width: 100%;
+      text-align: center;
+    }
+    .text-bottom {
+      padding: 1.5rem;
+      font-size: 2rem;
+      font-weight: 400;
+      width: 100%;
+      text-align: center;
+    }
+    .cyan {
+      color: #00c898;
+    }
+  }
+}
+
+.cell {
+  justify-content: center;
+  display: flex;
+  align-self: center;
+}
+
+.badge {
+  padding: 0.5rem 2rem;
+}
