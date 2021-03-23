@@ -23,7 +23,8 @@
               "node_modules/font-awesome/css/font-awesome.css",
               "node_modules/simple-line-icons/dist/styles/simple-line-icons.css",
               "src/scss/style.scss",
-              "node_modules/material-icons/iconfont/material-icons.css"
+              "node_modules/material-icons/iconfont/material-icons.css",
+              "node_modules/toastr/toastr.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["./node_modules"]
@@ -87,7 +88,8 @@
               "node_modules/font-awesome/css/font-awesome.css",
               "node_modules/simple-line-icons/dist/styles/simple-line-icons.css",
               "src/scss/style.scss",
-              "node_modules/material-icons/iconfont/material-icons.css"
+              "node_modules/material-icons/iconfont/material-icons.css",
+              "node_modules/toastr/toastr.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["./node_modules"]
